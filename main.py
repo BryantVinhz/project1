@@ -1,3 +1,8 @@
+def sortArray(arr):
+    for i in range(len(arr)):
+        for j in range(i + 1, len(arr)):
+            if arr[i] > arr[j]:
+                arr[i], arr[j] = arr[j], arr[i]
 def isPrime(n): 
     if n <= 1: 
         return False 
@@ -11,6 +16,9 @@ input_str = input("Enter a list of numbers separated by space: ")
 numbers = [int(num) for num in input_str.split()] 
 
 print("The list of numbers is:", numbers) 
+
+sortArray(numbers)
+
 if numbers:
     num_to_check = numbers[0] 
     if isPrime(num_to_check): 
