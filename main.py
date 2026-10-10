@@ -1,10 +1,12 @@
-def isPrime(n): 
-    if n <= 1: 
-        return False 
-    for i in range(2, n): 
-        if n % i == 0: 
-            return False 
-    return True 
+import math
+
+def isPrime(n):
+    if n <= 1:
+        return False
+    for i in range(2, math.isqrt(n) + 1):
+        if n % i == 0:
+            return False
+    return True
 
 def countPrimes(numbers):
     count = 0
